@@ -1,0 +1,77 @@
+========================================
+BLACKWATER LAND MANAGEMENT WEBSITE
+SETUP INSTRUCTIONS
+========================================
+
+✅ WHAT YOU HAVE:
+- Complete working website (4 pages)
+- Professional design with your logo
+- Mobile-responsive layout
+- All documentation
+
+📝 BEFORE YOU UPLOAD TO GITHUB:
+
+1. UPDATE YOUR PHONE NUMBER (REQUIRED!)
+   - Open each HTML file (index.html, services.html, about.html, contact.html)
+   - Find and replace ALL instances of: XXX-XXX-XXXX
+   - Replace with your actual phone number
+
+2. UPDATE YOUR EMAIL (REQUIRED!)
+   - In all HTML files, replace: info@blackwaterlandmanagement.com
+   - Replace with your actual business email
+
+3. ADD YOUR GOOGLE FORM TO CONTACT PAGE
+   - Open contact.html
+   - Find the yellow box with instructions
+   - Replace that section with your Google Forms iframe code
+
+🚀 TO DEPLOY:
+
+1. CREATE GITHUB REPOSITORY
+   - Go to github.com
+   - Create new repository: "blackwater-land-management"
+   - Don't initialize with README (you have one)
+
+2. UPLOAD FILES
+   Option A: Upload via web interface
+   - Click "uploading an existing file"
+   - Drag all files and folders
+   - Commit changes
+
+   Option B: Use Git command line
+   - cd to this folder
+   - git init
+   - git add .
+   - git commit -m "Initial website"
+   - git remote add origin YOUR_REPO_URL
+   - git push -u origin main
+
+3. ENABLE GITHUB PAGES
+   - Go to repository Settings
+   - Click "Pages" in left menu
+   - Source: main branch, / (root)
+   - Click Save
+   - Site will be live in 2-3 minutes
+
+4. CONNECT YOUR CUSTOM DOMAIN
+   - See DEPLOYMENT-CHECKLIST.md for DNS setup
+   - Add A records and CNAME to your domain
+   - Wait 24-48 hours for propagation
+
+📖 DOCUMENTATION:
+- README.md - Overview and quick start
+- DEPLOYMENT-CHECKLIST.md - Complete step-by-step guide
+- QUICK-START.md - Get live in 30 minutes
+- MAILERLITE-INTEGRATION-GUIDE.md - Email automation setup
+- WEBSITE-SPECIFICATION.md - Technical details
+
+🆘 NEED HELP?
+1. Read QUICK-START.md first
+2. Check DEPLOYMENT-CHECKLIST.md
+3. All files have comments explaining what they do
+
+📞 MOST IMPORTANT:
+Don't forget to replace XXX-XXX-XXXX with your real phone number!
+Test your Google Form works before announcing the site!
+
+Good luck! 🚀
