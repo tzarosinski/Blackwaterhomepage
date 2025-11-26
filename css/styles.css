@@ -693,6 +693,15 @@ a:hover {
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.25rem; }
     
+    .hero-video-container video {
+        object-fit: cover; /* Changes from 'contain' to 'cover' on mobile */
+    }
+    
+    .hero {
+        height: 60vh; /* Makes the hero section shorter on mobile */
+        min-height: 400px;
+    }
+    
     .section-title {
         font-size: 2rem;
     }
