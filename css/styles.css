@@ -86,12 +86,13 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-s) 0;
+    padding: 8px 0; /* Reduced from var(--spacing-s) which was 16px */
 }
 
 .logo img {
-    height: 50px;
+    height: 100px;  /* Reduce this - try 80px, 100px, or 120px */
     width: auto;
+    display: block;
 }
 
 .nav-menu {
@@ -171,6 +172,105 @@ a:hover {
     margin: 3px 0;
     transition: 0.3s;
 }
+/* ===========================
+   HERO SECTION WITH VIDEO
+   =========================== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    background: #000;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    font-weight: 400;
+    margin-bottom: var(--spacing-s);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-l);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-m);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-l);
+}
+
+.trust-bar {
+    display: flex;
+    gap: var(--spacing-m);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-l);
+}
+
+.stars {
+    color: #FFD700;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.5);
+}
 
 /* ===========================
    BUTTONS
@@ -228,68 +328,6 @@ a:hover {
     font-size: 1.1rem;
 }
 
-.nav-cta a {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-}
-
-/* ===========================
-   HERO SECTION
-   =========================== */
-
-.hero {
-    position: relative;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-gray) 100%);
-    color: var(--color-white);
-    text-align: center;
-    padding: var(--spacing-xxl) var(--spacing-s);
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: var(--color-white);
-    margin-bottom: var(--spacing-m);
-}
-
-.hero h2 {
-    font-size: 1.5rem;
-    color: var(--color-white);
-    font-weight: 400;
-    margin-bottom: var(--spacing-s);
-}
-
-.hero-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-l);
-}
-
-.hero-buttons {
-    display: flex;
-    gap: var(--spacing-m);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-l);
-}
-
 .hero-buttons .btn-secondary-large {
     background: transparent;
     color: var(--color-white);
@@ -301,21 +339,9 @@ a:hover {
     color: var(--color-orange);
 }
 
-.trust-bar {
-    display: flex;
-    gap: var(--spacing-m);
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: var(--spacing-l);
-}
-
-.stars {
-    color: #FFD700;
-}
-
-.separator {
-    color: rgba(255, 255, 255, 0.5);
+.nav-cta a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
 }
 
 /* ===========================
@@ -675,6 +701,14 @@ a:hover {
         display: flex;
     }
     
+    .logo img {
+        height: 120px; /* Smaller on mobile but still prominent */
+    }
+    
+    .nav {
+        padding: 4px 0; /* Even tighter on mobile */
+    }
+    
     .nav-menu {
         display: none;
         position: absolute;
@@ -710,11 +744,16 @@ a:hover {
         display: block;
     }
     
-    .hero h1 {
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
         font-size: 2rem;
     }
     
-    .hero h2 {
+    .hero-content h2 {
         font-size: 1.25rem;
     }
     
