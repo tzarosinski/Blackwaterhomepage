@@ -9,19 +9,53 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         .service-detail {
-            padding: 3rem 0;
-            border-bottom: 2px solid var(--color-light-gray);
+            margin-bottom: 4rem;
         }
         .service-detail:last-of-type {
-            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .service-hero-banner {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+        .service-hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .service-hero-title {
+            position: relative;
+            z-index: 2;
+            color: var(--color-white);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
         }
         .service-detail h2 {
-            color: var(--color-orange);
-            margin-bottom: 1rem;
+            display: none;
         }
         .service-detail h3 {
+            color: var(--color-orange);
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
+            font-size: 1.3rem;
         }
         .service-detail ul {
             margin-left: 2rem;
@@ -30,9 +64,22 @@
         .service-detail ul li {
             margin-bottom: 0.5rem;
         }
+        .service-detail p {
+            line-height: 1.7;
+            color: var(--color-dark-gray);
+        }
         .service-cta {
             text-align: center;
             margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .service-hero-banner {
+                height: 250px;
+            }
+            .service-hero-title {
+                font-size: 1.8rem;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -91,8 +138,9 @@
             
             <!-- Septic System Installation -->
             <div id="septic" class="service-detail">
-                <h2>Septic System Installation</h2>
-                <img src="images/septictankinstall.jpg" alt="Septic Tank Installation" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/septictankinstall.jpg');">
+                    <h2 class="service-hero-title">Septic System Installation</h2>
+                </div>
                 <p>Complete septic system installation is a cornerstone of our total site work services. We handle everything from initial soil testing through final inspection, ensuring your system is designed and installed correctly for East Texas conditions.</p>
                 
                 <h3>Our Septic Services Include:</h3>
@@ -124,8 +172,9 @@
 
             <!-- Land Clearing -->
             <div id="land-clearing" class="service-detail">
-                <h2>Land Clearing & Brush Removal</h2>
-                <img src="images/LandClearingandbrushremoval.png" alt="Land Clearing and Brush Removal" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/LandClearingandbrushremoval.png');">
+                    <h2 class="service-hero-title">Land Clearing & Brush Removal</h2>
+                </div>
                 <p>Transform your raw land into a build-ready site. Our land clearing services handle everything from selective tree removal to complete site preparation, giving you a clean slate for your project.</p>
                 
                 <h3>Land Clearing Services:</h3>
@@ -148,8 +197,9 @@
 
             <!-- House Pad -->
             <div id="house-pad" class="service-detail">
-                <h2>House Pad Development & Grading</h2>
-                <img src="images/housepad.jpg" alt="House Pad Development" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/housepad.jpg');">
+                    <h2 class="service-hero-title">House Pad Development & Grading</h2>
+                </div>
                 <p>A properly prepared house pad is critical for any building project. We create level, well-compacted, and properly drained building sites for mobile homes, barndominiums, and traditional construction.</p>
                 
                 <h3>House Pad Services:</h3>
@@ -172,8 +222,9 @@
 
             <!-- Driveway -->
             <div id="driveway" class="service-detail">
-                <h2>Driveway Construction</h2>
-                <img src="images/driveway.jpg" alt="Driveway Construction" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/driveway.jpg');">
+                    <h2 class="service-hero-title">Driveway Construction</h2>
+                </div>
                 <p>A well-built driveway withstands East Texas weather and heavy use. We construct gravel driveways with proper base preparation, drainage, and grading designed to last.</p>
                 
                 <h3>Driveway Services:</h3>
@@ -193,8 +244,9 @@
 
             <!-- Culvert -->
             <div id="culvert" class="service-detail">
-                <h2>Culvert Installation</h2>
-                <img src="images/Culvertinstallation.jpg" alt="Culvert Installation" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/Culvertinstallation.jpg');">
+                    <h2 class="service-hero-title">Culvert Installation</h2>
+                </div>
                 <p>Proper culvert installation is essential for driveway drainage and county code compliance. We install culverts sized correctly for Texas drainage requirements and your property's specific needs.</p>
                 
                 <h3>Culvert Services:</h3>
@@ -213,8 +265,9 @@
 
             <!-- Electrical Trenching -->
             <div id="electrical" class="service-detail">
-                <h2>Electrical Trenching & Utilities</h2>
-                <img src="images/utlilities.jpg" alt="Electrical Trenching and Utilities" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 2rem 0; display: block;">
+                <div class="service-hero-banner" style="background-image: url('images/utlilities.jpg');">
+                    <h2 class="service-hero-title">Electrical Trenching & Utilities</h2>
+                </div>
                 <p>Getting power and utilities to your property is a critical part of total site work. We handle trenching for electrical lines and coordinate with utility companies to keep your project moving forward.</p>
                 
                 <h3>Trenching Services:</h3>
