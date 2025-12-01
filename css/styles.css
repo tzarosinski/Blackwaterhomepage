@@ -381,16 +381,42 @@ a:hover {
 }
 
 .service-card {
-    background: var(--color-white);
-    padding: var(--spacing-l);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    pointer-events: none;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-overlay {
+    position: relative;
+    z-index: 1;
+    padding: var(--spacing-l);
+    width: 100%;
+    color: var(--color-white);
 }
 
 .service-icon {
@@ -400,10 +426,15 @@ a:hover {
 
 .service-card h3 {
     margin-bottom: var(--spacing-s);
+    color: var(--color-white);
+    font-size: 1.3rem;
 }
 
 .service-card p {
     margin-bottom: 0;
+    color: var(--color-white);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .cta-center {
