@@ -89,8 +89,12 @@ a:hover {
     padding: 8px 0; /* Reduced from var(--spacing-s) which was 16px */
 }
 
+.logo {
+    display: block;
+}
+
 .logo img {
-    height: 100px;  /* Reduce this - try 80px, 100px, or 120px */
+    height: 100px;
     width: auto;
     display: block;
 }
@@ -740,11 +744,11 @@ a:hover {
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .logo img {
-        height: 120px; /* Smaller on mobile but still prominent */
+        height: 60px; /* Smaller on mobile */
     }
-    
+
     .nav {
         padding: 4px 0; /* Even tighter on mobile */
     }
