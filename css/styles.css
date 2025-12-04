@@ -722,6 +722,57 @@ a:hover {
 /* ===========================
    RESPONSIVE - MOBILE
    =========================== */
+/* ===========================
+   FAQ SECTION
+   =========================== */
+
+.faq-section {
+    background: var(--color-light-gray);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: var(--spacing-l);
+}
+
+.faq-item {
+    background: var(--color-white);
+    margin-bottom: var(--spacing-m);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    color: var(--color-black);
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: var(--spacing-m);
+    margin: 0;
+    cursor: pointer;
+    background: var(--color-white);
+    border-left: 4px solid var(--color-orange);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-m) var(--spacing-m) var(--spacing-m);
+    color: var(--color-gray);
+    line-height: 1.8;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
 
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
