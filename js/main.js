@@ -15,12 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const link = dropdown.querySelector('a');
         if (link) {
             link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 900) {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
                 }
             });
         }
+
+        // Close dropdown when any link inside is clicked
+        const dropdownLinks = dropdown.querySelectorAll('.dropdown-menu a');
+        dropdownLinks.forEach(dropdownLink => {
+            dropdownLink.addEventListener('click', function() {
+                // Close the dropdown
+                dropdown.classList.remove('active');
+                // Close the mobile menu
+                if (navMenu) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
     });
     
     // Mobile Sticky CTA - show after scrolling past hero
