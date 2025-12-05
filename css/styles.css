@@ -16,15 +16,19 @@
     --color-gray: #333333;
     --color-light-gray: #F5F5F5;
     --color-green: #2D5016;
-    
+
     --spacing-xs: 8px;
     --spacing-s: 16px;
     --spacing-m: 24px;
     --spacing-l: 32px;
     --spacing-xl: 48px;
     --spacing-xxl: 64px;
-    
+
     --max-width: 1200px;
+}
+
+html {
+    scroll-padding-top: 110px; /* Account for sticky header when scrolling to anchors */
 }
 
 body {
@@ -774,24 +778,24 @@ a:hover {
    RESPONSIVE DESIGN
    =========================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.25rem; }
-    
+
     .hero-video-container video {
         object-fit: cover; /* Changes from 'contain' to 'cover' on mobile */
     }
-    
+
     .hero {
         height: 60vh; /* Makes the hero section shorter on mobile */
         min-height: 400px;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .mobile-menu-toggle {
         display: flex;
     }
@@ -897,9 +901,15 @@ a:hover {
 /* Review Carousel Styles */
 .review-carousel-section {
   background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(20,20,20,0.98) 100%);
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 3rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+}
+
+@media (max-width: 900px) {
+  .review-carousel-section {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .review-carousel-section::before {
@@ -1043,19 +1053,19 @@ a:hover {
 }
 
 .review-carousel-nav.prev {
-  left: -0.5rem;
+  left: 0.5rem;
 }
 
 .review-carousel-nav.next {
-  right: -0.5rem;
+  right: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .review-carousel-nav.prev {
-    left: -1.5rem;
+    left: 0.5rem;
   }
   .review-carousel-nav.next {
-    right: -1.5rem;
+    right: 0.5rem;
   }
 }
 
